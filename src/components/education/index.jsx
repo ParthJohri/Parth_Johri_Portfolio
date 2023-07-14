@@ -2,7 +2,7 @@ import { skeleton } from '../../helpers/utils';
 import { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
-const ListItem = ({ time, degree, institution }) => (
+const ListItem = ({ time, degree, institution ,cgpa}) => (
   <li className="mb-5 ml-4">
     <div
       className="absolute w-2 h-2 bg-base-300 rounded-full border border-base-300 mt-1.5"
@@ -10,6 +10,7 @@ const ListItem = ({ time, degree, institution }) => (
     ></div>
     <div className="my-0.5 text-xs">{time}</div>
     <h3 className="font-semibold">{degree}</h3>
+    <h2 className="font-semibold">CGPA/Percentage: {cgpa}</h2>
     <div className="mb-4 font-normal">{institution}</div>
   </li>
 );
@@ -65,6 +66,7 @@ const Education = ({ loading, education }) => {
                         key={index}
                         time={`${item.from} - ${item.to}`}
                         degree={item.degree}
+                        cgpa = {item.cgpa}
                         institution={item.institution}
                       />
                     ))}
@@ -87,6 +89,7 @@ Education.propTypes = {
 ListItem.propTypes = {
   time: PropTypes.node,
   degree: PropTypes.node,
+  cgpa : PropTypes.node,
   institution: PropTypes.node,
 };
 

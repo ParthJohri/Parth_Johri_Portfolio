@@ -1,6 +1,3 @@
-// Type definitions for GitProfile
-// Project https://github.com/arifszn/gitprofile
-// Author: Ariful Alam <arifulalamszn@gmail.com>
 
 import { Component } from 'react';
 
@@ -118,6 +115,47 @@ export interface Social {
    * Email
    */
   email?: string;
+}
+export interface CodingProfiles {
+  /**
+   * LeetCode
+   */
+  leetcode?: string;
+
+  /**
+   * Codeforces
+   */
+  codeforces?: string;
+
+  /**
+   * CodeChef
+   */
+  codechef?: string;
+
+  /**
+   * GeeksforGeeks
+   */
+  geeksforgeeks?: string;
+
+  /**
+   * HackerRank
+   */
+  hackerrank?: string;
+
+  /**
+   * HackerEarth
+   */
+  hackerearth?: string;
+
+  /**
+   * AtCoder
+   */
+  atcoder?: string;
+
+  /**
+   * CSES
+   */
+  cses?: string;
 }
 
 export interface Blog {
