@@ -28,7 +28,7 @@ const config = {
     email: "parthjohri31@gmail.com",
   },
   codingProfiles: {
-    leetcode: "",
+    leetcode: "binarysolver",
     codeforces: "",
     codechef: "",
     geeksforgeeks: "",
@@ -134,8 +134,7 @@ const config = {
       title: "DTU Seat Alert",
       description:
         "Welcome to the DTU Seat Bot! Stay updated with the latest seat availability information for various courses at Delhi Technological University. Get real-time information on available seats for different subject codes and their respective groups. Whether you're a student planning your course selection.",
-      imageUrl:
-        "https://github.com/ParthJohri/Parth_Johri_Portfolio/blob/8dfd002f9edf5659f2169f53483a1404e737686d/public/projecticons/alert.png",
+      imageUrl: "public/static/images/alert.png",
       link: "https://github.com/ParthJohri/DTU-SeatAlertBot",
     },
     {

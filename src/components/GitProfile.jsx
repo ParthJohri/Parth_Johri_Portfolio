@@ -12,6 +12,8 @@ import Education from './education';
 import Project from './project';
 import Blog from './blog';
 import Footer from './footer';
+import codeDetails from './codingprofiles';
+
 import {
   genericError,
   getInitialTheme,
@@ -176,6 +178,12 @@ const GitProfile = ({ config }) => {
                         loading={loading}
                         github={sanitizedConfig.github}
                         social={sanitizedConfig.social}
+                      />
+                      <codeDetails
+                        profile={profile}
+                        loading={loading}
+                        github={sanitizedConfig.github}
+                        codingProfiles={sanitizedConfig.codingProfiles}
                       />
                       <Skill
                         loading={loading}
