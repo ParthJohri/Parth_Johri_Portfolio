@@ -1,5 +1,5 @@
 {
-  "name": "@arifszn/gitprofile",
+  "name": "@ParthJohri/ParthJohri.github.io",
   "description": "Create an automatic portfolio based on GitHub profile",
   "homepage": "https://ParthJohri.github.io",
   "version": "2.6.0",
@@ -7,7 +7,7 @@
   "author": "arifszn",
   "repository": {
     "type": "git",
-    "url": "https://github.com/arifszn/gitprofile.git"
+    "url": "https://github.com/ParthJohri/ParthJohri.github.io.git"
   },
   "bugs": {
     "url": "https://github.com/arifszn/gitprofile/issues"
