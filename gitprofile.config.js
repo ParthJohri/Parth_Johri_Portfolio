@@ -135,7 +135,7 @@ const config = {
       description:
         "Welcome to the DTU Seat Bot! Stay updated with the latest seat availability information for various courses at Delhi Technological University. Get real-time information on available seats for different subject codes and their respective groups. Whether you're a student planning your course selection.",
       imageUrl:
-        "https://github.com/ParthJohri/Parth_Johri_Portfolio/tree/main/public/projecticons/alert.png",
+        "https://github.com/ParthJohri/Parth_Johri_Portfolio/blob/8dfd002f9edf5659f2169f53483a1404e737686d/public/projecticons/alert.png",
       link: "https://github.com/ParthJohri/DTU-SeatAlertBot",
     },
     {
@@ -151,7 +151,7 @@ const config = {
       description:
         "This whatsapp helps you to invoke everyone in the group, with additional functionalities like downloading a youtube video or answering your queries.",
       imageUrl:
-        "https://github.com/ParthJohri/Parth_Johri_Portfolio/tree/main/public/projecticons/bot.png",
+        "https://github.com/ParthJohri/Parth_Johri_Portfolio/blob/8dfd002f9edf5659f2169f53483a1404e737686d/public/projecticons/bot.png",
       link: "https://github.com/ParthJohri/Parth-Wbot",
     },
     {
