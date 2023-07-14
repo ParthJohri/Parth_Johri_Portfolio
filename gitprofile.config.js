@@ -119,7 +119,7 @@ const config = {
       description:
         "This is DTU RM Portal Bot! 🤖 Are you looking for information on companies visiting DTU's Recruitment Management (RM) Portal? Look no further! This bot is designed to gather the latest information about companies accessing the DTU RM Portal, informing you with updated informations and prospects.",
       imageUrl:
-        "https://github.com/ParthJohri/Parth_Johri_Portfolio/tree/main/public/projecticons/robot.png",
+        "https://github.com/ParthJohri/Parth_Johri_Portfolio/blob/e23c2b23673a1000d0e337bab3baa064ad44f27e/public/projecticons/robot.png",
       link: "https://github.com/ParthJohri/rm-whatsapp-bot",
     },
     {
@@ -127,7 +127,7 @@ const config = {
       description:
         "Many a times we forget to take our medicines at the given time which would cause trouble in the long run. Moreover in this unexpected situation of COVID-19, tracking of mental and physical health is the most important task.This android application reminds the user to take it's medicines on time.",
       imageUrl:
-        "https://github.com/ParthJohri/Parth_Johri_Portfolio/tree/main/public/projecticons/medicine.png",
+        "https://github.com/ParthJohri/Parth_Johri_Portfolio/blob/e23c2b23673a1000d0e337bab3baa064ad44f27e/public/projecticons/medicine.png",
       link: "https://github.com/ParthJohri/Medicine-Tracker",
     },
     {
@@ -143,7 +143,7 @@ const config = {
       description:
         "This is a web application which will not only reduce the dependency of Farmers on Middlemen but also help them to sell their crops to retailers, wholesalers, consumers at a better price. Not only this but this web app would help them to keep track of all their transactions.",
       imageUrl:
-        "https://github.com/ParthJohri/Parth_Johri_Portfolio/tree/main/public/projecticons/farmer.png",
+        "https://github.com/ParthJohri/Parth_Johri_Portfolio/blob/e23c2b23673a1000d0e337bab3baa064ad44f27e/public/projecticons/farmer.png",
       link: "https://intrepid-axle-386617.el.r.appspot.com/",
     },
     {
@@ -159,7 +159,7 @@ const config = {
       description:
         "This is tip calculator which would give you the total and tip value with some cool interaction feedback after entering the Bill amount with the tip percent. This app is made on Kotlin programming language.",
       imageUrl:
-        "https://github.com/ParthJohri/Parth_Johri_Portfolio/tree/main/public/projecticons/calculator.png",
+        "https://github.com/ParthJohri/Parth_Johri_Portfolio/blob/e23c2b23673a1000d0e337bab3baa064ad44f27e/public/projecticons/calculator.png",
       link: "https://github.com/ParthJohri/tip-calci",
     },
   ],
