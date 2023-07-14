@@ -12,7 +12,7 @@ import Education from './education';
 import Project from './project';
 import Blog from './blog';
 import Footer from './footer';
-
+import CodeDetails from './codingprofiles';
 import {
   genericError,
   getInitialTheme,
@@ -178,6 +178,9 @@ const GitProfile = ({ config }) => {
                         github={sanitizedConfig.github}
                         social={sanitizedConfig.social}
                       />
+                      <CodeDetails
+                        
+                      />
                       <Skill
                         loading={loading}
                         skills={sanitizedConfig.skills}
@@ -198,7 +201,7 @@ const GitProfile = ({ config }) => {
                   </div>
                   <div className="lg:col-span-2 col-span-1">
                     <div className="grid grid-cols-1 gap-6">
-                    <ExternalProject
+                      <ExternalProject
                         loading={loading}
                         externalProjects={sanitizedConfig.externalProjects}
                         googleAnalytics={sanitizedConfig.googleAnalytics}
@@ -262,6 +265,7 @@ GitProfile.propTypes = {
       phone: PropTypes.string,
       email: PropTypes.string,
     }),
+
     resume: PropTypes.shape({
       fileUrl: PropTypes.string,
     }),

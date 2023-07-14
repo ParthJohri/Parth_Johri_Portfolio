@@ -23,20 +23,11 @@ const config = {
     stackoverflow: "",
     skype: "",
     telegram: "",
-    website: "https://parthjohri.github.io",
+    website: "https://parth-johri.vercel.app/",
     phone: "",
     email: "parthjohri31@gmail.com",
   },
-  codingProfiles: {
-    leetcode: "binarysolver",
-    codeforces: "",
-    codechef: "",
-    geeksforgeeks: "",
-    hackerrank: "",
-    hackerearth: "",
-    atcoder: "",
-    cses: "",
-  },
+
   resume: {
     fileUrl:
       "https://drive.google.com/file/d/1fpAnbgrx4lu30Id-bIgShJ2F1aHSIYTU/view?usp=share_link", // Empty fileUrl will hide the `Download Resume` button.

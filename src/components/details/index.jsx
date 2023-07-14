@@ -5,6 +5,8 @@ import {
   AiFillMediumSquare,
 } from 'react-icons/ai';
 import { SiTwitter } from 'react-icons/si';
+import { SiLeetcode, SiCodeforces, SiCodechef, SiHackerrank, SiHackerearth, SiGeeksforgeeks } from 'react-icons/si';
+import { BiCodeAlt } from 'react-icons/bi';
 import { CgDribbble } from 'react-icons/cg';
 import { RiPhoneFill, RiMailFill } from 'react-icons/ri';
 import { Fragment } from 'react';
@@ -178,7 +180,7 @@ const Details = ({ profile, loading, social, github }) => {
                 <ListItem
                   icon={<FaYoutube />}
                   title="YouTube:"
-                  value={`@${social.youtube}`}
+                  value={`@${social.youtube.toLowerCase()}`}
                   link={`https://www.youtube.com/@${social.youtube}`}
                 />
               )}
@@ -247,6 +249,7 @@ const Details = ({ profile, loading, social, github }) => {
                   link={`mailto:${social.email}`}
                 />
               )}
+              
             </Fragment>
           )}
         </div>

@@ -1,76 +1,12 @@
-import { MdLocationOn } from 'react-icons/md';
-import PropTypes from 'prop-types';
 import { skeleton } from '../../helpers/utils';
-import {
-  FaBuilding,
-  FaLeetcode,
-  FaCodeforces,
-  FaCodepen,
-  FaGithub,
-} from 'react-icons/fa';
-import { SiCodechef, SiHackerrank, SiHackerearth, SiAtcoder } from 'react-icons/si';
-import { BiCodeAlt } from 'react-icons/bi';
 
-const isCompanyMention = (company) => {
-  return company.startsWith('@') && !company.includes(' ');
-};
+import { SiLeetcode, SiCodeforces, SiCodechef, SiHackerrank, SiHackerearth, SiGeeksforgeeks } from 'react-icons/si';
 
-const companyLink = (company) => {
-  return `https://github.com/${company.substring(1)}`;
-};
+import { Fragment } from 'react';
 
-const getFormattedProfileLink = (profile, platform) => {
-  const username = profile[platform];
-  if (username) {
-    switch (platform) {
-      case 'leetcode':
-        return `https://leetcode.com/${username}`;
-      case 'codeforces':
-        return `https://codeforces.com/profile/${username}`;
-      case 'codechef':
-        return `https://www.codechef.com/users/${username}`;
-      case 'geeksforgeeks':
-        return `https://auth.geeksforgeeks.org/user/${username}`;
-      case 'hackerrank':
-        return `https://www.hackerrank.com/${username}`;
-      case 'hackerearth':
-        return `https://www.hackerearth.com/@${username}`;
-      case 'atcoder':
-        return `https://atcoder.jp/users/${username}`;
-      case 'cses':
-        return `https://cses.fi/user/${username}`;
-      default:
-        return null;
-    }
-  }
-  return null;
-};
+import PropTypes from 'prop-types';
 
-const getIconByPlatform = (platform) => {
-  switch (platform) {
-    case 'leetcode':
-      return <FaLeetcode />;
-    case 'codeforces':
-      return <FaCodeforces />;
-    case 'codechef':
-      return <SiCodechef />;
-    case 'geeksforgeeks':
-      return <FaCodepen />;
-    case 'hackerrank':
-      return <SiHackerrank />;
-    case 'hackerearth':
-      return <SiHackerearth />;
-    case 'atcoder':
-      return <SiAtcoder />;
-    case 'cses':
-      return <BiCodeAlt />;
-    default:
-      return null;
-  }
-};
-
-const ListItem = ({ icon, title, value, platform, profile, skeleton = false }) => {
-  const link = getFormattedProfileLink(profile, platform);
+const ListItem = ({ icon, title, value, link, skeleton = false }) => {
   return (
     <a
       href={link}
@@ -95,7 +31,7 @@ const ListItem = ({ icon, title, value, platform, profile, skeleton = false }) =
   );
 };
 
-const codeDetails = ({ profile, loading, codingProfiles, github }) => {
+const CodeDetails = ({ profile, loading, social, github }) => {
   const renderSkeleton = () => {
     let array = [];
     for (let index = 0; index < 4; index++) {
@@ -112,72 +48,66 @@ const codeDetails = ({ profile, loading, codingProfiles, github }) => {
 
     return array;
   };
-
-  return (
-    <div className="card shadow-lg compact bg-base-100">
-      <div className="card-body">
-        <div className="text-base-content text-opacity-60">
-          {loading || !profile ? (
-            renderSkeleton()
-          ) : (
-            <>
-              {profile.location && (
-                <ListItem
-                  icon={<MdLocationOn />}
-                  title="Based in:"
-                  value={profile.location}
-                />
-              )}
-              {profile.company && (
-                <ListItem
-                  icon={<FaBuilding />}
-                  title="Company:"
-                  value={profile.company}
-                  link={
-                    isCompanyMention(profile.company.trim())
-                      ? companyLink(profile.company.trim())
-                      : null
-                  }
-                />
-              )}
+return (
+  <div className="card shadow-lg compact bg-base-100">
+    <div className="card-body">
+              <h5 className="card-title">
+                {loading ? (
+                  skeleton({ width: 'w-32', height: 'h-8' })
+                ) : (
+                  <span className="text-base-content opacity-70">
+                    Coding Profiles
+                  </span>
+                )}
+              </h5>
+      <div className="text-base-content text-opacity-60">
+        {(
+          <Fragment>
+            {(
               <ListItem
-                icon={<FaGithub />}
-                title="GitHub:"
-                value={github.username}
-                link={`https://github.com/${github.username}`}
+                icon={<SiLeetcode />}
+                title="LeetCode:"
+                value={"binarysolver"}
+                link={`https://leetcode.com/binarysolver`}
               />
-              {Object.entries(codingProfiles).map(([platform, title]) => (
-                <ListItem
-                  key={platform}
-                  icon={getIconByPlatform(platform) || <BiCodeAlt />}
-                  title={title + ':'}
-                  value={profile[platform]}
-                  platform={platform}
-                  profile={profile}
-                />
-              ))}
-            </>
-          )}
-        </div>
+            )}
+            {(
+              <ListItem
+                icon={<SiCodeforces />}
+                title="Codeforces:"
+                value={"binarysolver"}
+                link={`https://codeforces.com/profile/binarysolver`}
+              />
+            )}
+            {(
+              <ListItem
+                icon={<SiGeeksforgeeks />}
+                title="GeeksForGeeks:"
+                value={"parthjohri31"}
+                link={`https://auth.geeksforgeeks.org/user/parthjohri31/practice`}
+              />
+            )}
+            {(
+              <ListItem
+                icon={<SiCodechef />}
+                title="CodeChef:"
+                value={"parthjohri"}
+                link={`https://www.codechef.com/users/parthjohri`}
+              />
+            )}
+            {(
+              <ListItem
+                icon={<SiHackerrank />}
+                title="Hackerank:"
+                value={"parthjohri31"}
+                link={`https://www.hackerrank.com/parthjohri31?hr_r=1`}
+              />
+            )}
+          </Fragment>
+        )}
       </div>
     </div>
-  );
-};
-
-codeDetails.propTypes = {
-  profile: PropTypes.object,
-  loading: PropTypes.bool.isRequired,
-  codingProfiles: PropTypes.object.isRequired,
-  github: PropTypes.object.isRequired,
-};
-
-ListItem.propTypes = {
-  icon: PropTypes.node,
-  title: PropTypes.node,
-  value: PropTypes.node,
-  platform: PropTypes.string.isRequired,
-  profile: PropTypes.object.isRequired,
-  skeleton: PropTypes.bool,
-};
-
-export default codeDetails;
+  </div>
+);
+            }
+export default CodeDetails;
