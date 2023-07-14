@@ -2,7 +2,7 @@
 
 const config = {
   github: {
-    username: "ParthJohri",
+    username: "parthjohri",
     sortBy: "updated", // stars | updated
     limit: 10, // How many projects to display.
     exclude: {
